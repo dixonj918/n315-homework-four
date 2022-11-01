@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+.navHolder {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.navHolder .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 10px;
+}
+.navHolder .logo h1 {
+  color: antiquewhite;
+}
+.navHolder .bars {
+  display: none;
+}
+.navHolder .bars .bar {
+  display: block;
+  width: 25px;
+  margin: 5px 0;
+  background-color: black;
+  height: 3px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.navHolder .bars.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.navHolder .bars.active .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(45deg);
+          transform: translateY(8px) rotate(45deg);
+}
+.navHolder .bars.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+          transform: translateY(-8px) rotate(-45deg);
+}
+.navHolder .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* display: none; */
+  height: 50px;
+  width: 50%;
+  overflow: hidden;
+  margin-left: -10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition: height 0.2s, opacity 0.2s ease-in;
+  transition: height 0.2s, opacity 0.2s ease-in;
+}
+.navHolder .links a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+.navHolder .links.active {
+  height: 100vh;
+  opacity: 1;
+}
+
+@media screen and (max-width: 960px) {
+  .navHolder .bars {
+    display: block;
+    position: fixed;
+    right: 0;
+  }
+
+  .navHolder .logo {
+    display: none;
+  }
+
+  .navHolder .links {
+    height: 0;
+    opacity: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.homeHero {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  background-image: url(../images/home-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.homeHero .callout {
+  font-size: 60px;
+  margin-left: 20px;
+  color: gold;
+}
+
+.homeHeader {
+  width: 50%;
+  height: 50px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.homeHeader h1 {
+  border-bottom: 2px solid black;
+}
+
+.homeText {
+  min-height: 500px;
+  width: 900px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 25px;
+}
+.homeText .browseImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.homeText .browseImage img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.homeText .home-text-left {
+  min-width: 150px;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.homeText .home-text-left p {
+  text-align: center;
+}
+.homeText .home-text-right {
+  min-width: 150px;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.homeText .home-text-right p {
+  text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+  .homeText {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 500px;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .homeText .home-text-left {
+    margin-bottom: 50px;
+    margin-top: 25px;
+    height: 100%;
+  }
+  .homeText .home-text-left p {
+    text-align: left;
+  }
+
+  .homeText .home-text-right {
+    margin-bottom: 50px;
+    height: 100%;
+  }
+  .homeText .home-text-right p {
+    text-align: left;
+  }
+}
+form {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+input {
+  display: block;
+  margin: 10px 0;
+  width: 200px;
+}
+
+.formWrapper {
+  width: 75%;
+  height: 250px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.formWrapper .login {
+  width: 50%;
+}
+.formWrapper .login h1 {
+  width: 100px;
+  margin: 0 auto;
+}
+.formWrapper .createAccount {
+  width: 50%;
+}
+.formWrapper .createAccount h1 {
+  width: 250px;
+  margin: 0 auto;
+}
+.formWrapper .createAccountWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.formWrapper .createAccountWrapper form {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 960px) {
+  .formWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+  }
+  .formWrapper .createAccount {
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,116 @@
+.homeHero{
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    background-image: url(../images/home-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .callout{
+        font-size: 60px;
+        margin-left: 20px;
+        color: gold;
+    }
+}
+
+.homeHeader{
+    width: 50%;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: blue;
+
+    h1{
+        border-bottom: 2px solid black;
+    }
+}
+
+
+
+.homeText{
+    min-height: 500px;
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    // background-color: aqua;
+    margin-top: 25px;
+
+    .browseImage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width:200px;
+            height: 200px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+    }
+
+    .home-text-left{
+        min-width: 150px;
+        min-height: 200px;
+        // background-color: green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p{
+            text-align: center;
+        }
+
+    }
+    .home-text-right{
+        min-width: 150px;
+        min-height: 200px;
+        // background-color: green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p{
+            text-align: center;
+        }
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .homeText{
+        flex-direction: column;
+        min-height: 500px;
+        width: 300px;
+        margin: 0 auto;
+        
+    }
+
+    .homeText .home-text-left{
+        margin-bottom: 50px;
+        margin-top: 25px;
+        height: 100%;
+        
+
+        p{
+            text-align: left;
+        }
+
+        }
+
+    .homeText .home-text-right{
+        margin-bottom: 50px;
+        height: 100%;
+
+        p{
+            text-align: left;
+        }
+    }
+}
